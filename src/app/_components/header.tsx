@@ -36,40 +36,6 @@ export default function Header() {
             <span className="text-neutral-400">{CONFIG.title}</span>
           </div>
         </div>
-
-        {/* Mobile */}
-        <div className='flex md:hidden items-end'>
-          <button onClick={() => setIsOpen(true)}>
-            <EllipsisVertical size={18} className="stroke-neutral-400 hover:stroke-neutral-200 duration-200" />
-          </button>
-        </div>
-
-        {/* Desktop */}
-        <div className="hidden md:flex flex-row space-x-2">
-          <TooltipProvider delayDuration={70}>
-            {CONFIG.socials.map((social, idx) => {
-              return (
-                <Tooltip key={idx}>
-                  <TooltipTrigger className={`${socialBorder}`}>
-                    <Link
-                      href={social.link}
-                      target="_blank"
-                      className="cursor-pointer"
-                    >
-                      {social.icon}
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    className="mr-4 px-3 py-1.5 text-xs"
-                  >
-                    {social.platform}
-                  </TooltipContent>
-                </Tooltip>
-              );
-            })}
-          </TooltipProvider>
-        </div>
       </header>
       <DialogNavMenu isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className="flex flex-col gap-4 items-start">

@@ -48,44 +48,7 @@ export default function Posts({
         <span className="text-4xl font-bold mb-6 md:mb-4 animate-slide-from-down-and-fade-2">
           All Posts
         </span>
-        <div className="flex flex-row space-x-4 mb-6 md:mb-4 text-sm  overflow-x-auto line-clamp-1 text-nowrap animate-slide-from-down-and-fade-3">
-          <Link
-            href="/posts"
-            className={`${tag === null ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline`}
-          >
-            All
-          </Link>
-          <Link
-            href="/posts?tag=technical"
-            className={`${tag === 'technical' ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline`}
-          >
-            Technical
-          </Link>
-          {/* <Link
-            href="/posts?tag=marketing"
-            className={`${tag === 'marketing' ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline`}
-          >
-            Marketing
-          </Link> */}
-          <Link
-            href="/posts?tag=personal"
-            className={`${tag === 'personal' ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline`}
-          >
-            Personal
-          </Link>
-          <Link
-            href="/posts?tag=book-notes"
-            className={`${tag === 'book-notes' ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline `}
-          >
-            Book Notes
-          </Link>
-          <Link
-            href="/posts?tag=random"
-            className={`${tag === 'random' ? 'text-secondaryDark underline' : 'text-secondaryDarker'} hover:text-secondaryDark duration-200 hover:underline`}
-          >
-            Random
-          </Link>
-        </div>
+        
 
         <div>
           <div className="grid grid-cols-1 gap-6 md:gap-1 md:-px-2 animate-slide-from-down-and-fade-3">
