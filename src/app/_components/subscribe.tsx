@@ -53,7 +53,7 @@ export default function Subscribe() {
                     {...field}
                     type="email"
                     placeholder="Email Address"
-                    className="w-full h-10 px-3 text-base py-2 rounded-lg border border-neutral-800 bg-neutral-800/50 text-neutral-400 focus:outline-none focus:ring-0.5 focus:ring-secondary/20 focus:ring-offset-0.5 focus:ring-offset-secondary-800 focus:border-secondary/20"
+                    className="w-full h-10 px-3 text-sm py-2 rounded-lg border border-neutral-800 bg-neutral-800/50 text-neutral-400 focus:outline-none focus:ring-0.5 focus:ring-secondary/20 focus:ring-offset-0.5 focus:ring-offset-secondary-800 focus:border-secondary/20"
                   />
                 </FormControl>
               </FormItem>
@@ -62,9 +62,9 @@ export default function Subscribe() {
 
           <button
             type="submit"
-            className="h-10 rounded-lg bg-secondary font-medium px-6 text-neutral-800 hover:bg-secondary/80"
+            className="h-10 rounded-lg bg-secondary font-medium px-6 text-neutral-800 hover:bg-secondary/80 text-sm"
           >
-            <span>Join</span>
+            Join
           </button>
         </form>
       </Form>

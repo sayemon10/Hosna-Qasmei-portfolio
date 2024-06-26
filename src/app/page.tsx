@@ -85,7 +85,7 @@ export default async function Home() {
               href="/projects"
               className="flex flex-row space-x-2 items-center md:px-6 group cursor-pointer justify-end"
             >
-              <span className="text-neutral-400 text-sm underline underline-offset-4 hover:text-secondary duration-200">
+              <span className="text-neutral-400 text-sm hover:underline underline-offset-4 hover:text-secondary duration-200">
                 All Projects
               </span>
             </Link>
@@ -130,7 +130,7 @@ export default async function Home() {
               href="/posts"
               className="flex flex-row space-x-2 items-center md:px-6 group cursor-pointer  justify-end"
             >
-              <span className="text-neutral-400 text-sm underline underline-offset-4 hover:text-secondary duration-200">
+              <span className="text-neutral-400 text-sm hover:underline underline-offset-4 hover:text-secondary duration-200">
                 All Posts
               </span>
             </Link>

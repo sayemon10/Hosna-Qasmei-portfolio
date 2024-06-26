@@ -7,8 +7,7 @@ import { YouTubeIcon } from '@/components/icons/youtube';
 
 export const CONFIG = {
   name: 'Hosna Qasmei',
-  headshot:
-    'https://res.cloudinary.com/duud9d8dv/image/upload/v1696801306/headshot_mlyfwz.jpg',
+  headshot: '/headshot.png',
   title: 'Software Developer',
   description: `Hi, I'm Hosna. I'm based in Los Angeles, California. In addition to coding, I also make YouTube videos, sharing my knowledge 
 and experience on web & mobile development.`,
@@ -46,8 +45,7 @@ and experience on web & mobile development.`,
       name: 'ProjectPlannerAI',
       slug: 'project-planner-ai',
       description: 'Manage your side projects in one place.',
-      image:
-        'https://res.cloudinary.com/duud9d8dv/image/upload/v1704691486/project-planner-ai_imlf93.png',
+      image: '/icons/project-planner-ai.png',
       link: 'https://projectplannerai.com/',
     },
     {
@@ -55,17 +53,23 @@ and experience on web & mobile development.`,
       name: 'TechStackFinder',
       slug: 'tech-stack-finder',
       description: 'Top stacks for building projects and SaaS.',
-      image:
-        'https://res.cloudinary.com/duud9d8dv/image/upload/v1705091981/tech-stack-finder_inkeoz.png',
+      image: '/icons/tech-stack-finder.png',
       link: 'https://techstackfinder.com/',
     },
     {
       featured: true,
+      name: 'PortfoliosHub',
+      slug: 'portfolioshub',
+      description: 'Find the best portfolios and showcase your work.',
+      image: '/icons/portfolioshub.png',
+      link: 'https://www.portfolioshub.com/',
+    },
+    {
+      featured: false,
       name: 'RepoMapper',
       slug: 'repo-mapper',
       description: 'Visualize Your GitHub Repos in ASCII.',
-      image:
-        'https://res.cloudinary.com/duud9d8dv/image/upload/v1708108981/portfolio/repo-mapper_yntapy.png',
+      image: '/icons/repo-mapper.png',
       link: 'https://repo-mapper.vercel.app/',
     },
     {
@@ -73,8 +77,7 @@ and experience on web & mobile development.`,
       name: 'Open Graph Vault',
       slug: 'open-graph-vault',
       description: 'Where all your open graph images live.',
-      image:
-        'https://res.cloudinary.com/duud9d8dv/image/upload/v1704691426/open-graph-vault_pl6sgd.png',
+      image: '/icons/open-graph-vault.png',
       link: 'https://opengraphvault.com/',
     },
     {
@@ -82,8 +85,7 @@ and experience on web & mobile development.`,
       name: 'CustomGradient',
       slug: 'custom-gradient',
       description: 'A gradient generator and editor.',
-      image:
-        'https://res.cloudinary.com/duud9d8dv/image/upload/v1708045890/portfolio/icon_a7ignp.png',
+      image: '/icons/custom-gradient.png',
       link: 'https://customgradient.com/',
     },
   ],
