@@ -5,6 +5,10 @@ import { TwitchIcon } from '@/components/icons/twitch';
 import { XIcon } from '@/components/icons/x';
 import { YouTubeIcon } from '@/components/icons/youtube';
 
+
+
+
+
 export const CONFIG = {
   name: 'Hosna Qasmei',
   headshot: '/headshot.png',
@@ -63,6 +67,14 @@ and experience on web & mobile development.`,
       description: 'Find the best portfolios and showcase your work.',
       image: '/icons/portfolioshub.png',
       link: 'https://www.portfolioshub.com/',
+    },
+    {
+      featured: true,
+      name: 'GuessParty',
+      slug: 'guessparty',
+      description: 'A game where you guess who the displayed items belongs to.',
+      image: '/icons/guessparty.png',
+      link: 'https://www.guessparty.com/',
     },
     {
       featured: false,
