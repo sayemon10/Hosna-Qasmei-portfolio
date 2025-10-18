@@ -88,6 +88,7 @@ font-family: 'Helvetica Neue', 'Akkurat', 'Neue Haas Unica', system-ui, sans-ser
 - Don't use colors outside the approved palette
 - Don't add decorative elements to the logo
 - Don't use outdated versions
+test
 
 ### File Structure
 ```
