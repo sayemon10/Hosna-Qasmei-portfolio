@@ -3,14 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --font-montserrat: var(--font-montserrat);
-  --font-lora: var(--font-lora);
+  --font-inter: var(--font-inter);
+  --font-space-grotesk: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-montserrat);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-lora);
+* {
+  box-sizing: border-box;
 } 

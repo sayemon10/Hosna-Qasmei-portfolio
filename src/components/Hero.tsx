@@ -1,121 +1,133 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Logo } from './Logo';
-import { BridgeAnimation } from './BridgeAnimation';
 
-// Temporary placeholder image
-const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23556B2F'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24'%3ETW%3C/text%3E%3C/svg%3E";
-
-const bridgeAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  }
-};
-
-const textAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay,
-      duration: 0.8,
-      ease: [0.6, -0.05, 0.01, 0.99]
-    }
-  })
-};
+const roles = ['ENGINEER', 'SOLDIER', 'BUILDER'];
 
 export function Hero() {
+  const [currentRole, setCurrentRole] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary/30 to-secondary" />
-        <div className="absolute inset-0 bg-[url('/images/bridge-pattern.svg')] opacity-10" />
+    <div className="min-h-screen bg-gunmetal flex items-center justify-center px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Grid System */}
+        <div className="grid grid-cols-12 gap-8 items-center">
+          
+          {/* Left Column - Portrait */}
+          <div className="col-span-5">
+            <div className="relative">
+              <div className="w-80 h-80 relative overflow-hidden">
+                <Image
+                  src="/images/portrait.jpeg"
+                  alt="Timeo Williams"
+                  fill
+                  className="object-cover grayscale"
+                  priority
+                />
+              </div>
+              
+              {/* Subtle grid overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-gunmetal/20 to-transparent" />
+            </div>
+          </div>
+
+          {/* Right Column - Content */}
+          <div className="col-span-7">
+            
+            {/* Name & Title */}
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+              >
+                <h1 className="font-sans text-cream text-5xl font-light tracking-wide leading-tight">
+                  TIMEO WILLIAMS
+                </h1>
+                <div className="h-px bg-steel w-24 mt-4" />
+              </motion.div>
+
+              {/* Rotating Role */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="h-12"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentRole}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                    className="font-display text-khaki text-xl tracking-widest block"
+                  >
+                    {roles[currentRole]}
+                  </motion.span>
+                </AnimatePresence>
+              </motion.div>
+
+              {/* Tagline */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
+              >
+                <p className="font-sans text-cream/80 text-lg font-light leading-relaxed max-w-md">
+                  THE BRIDGE BUILDER
+                </p>
+                <p className="font-sans text-cream/60 text-base font-light leading-relaxed max-w-md mt-2">
+                  Connecting Technology to Humanity
+                </p>
+              </motion.div>
+
+              {/* Minimalist CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="pt-8"
+              >
+                <button className="group relative">
+                  <div className="h-px bg-steel w-16 group-hover:w-24 transition-all duration-300" />
+                  <span className="font-sans text-cream/60 text-sm tracking-wide mt-2 block group-hover:text-khaki transition-colors duration-300">
+                    EXPLORE
+                  </span>
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Grid Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.3 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <div className="flex space-x-2">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 border border-steel/50 transition-all duration-300 ${
+                  i === currentRole ? 'bg-khaki' : ''
+                }`}
+              />
+            ))}
+          </div>
+        </motion.div>
       </div>
-
-      {/* Logo in top left */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ 
-          duration: 0.6, 
-          delay: 0.2,
-          ease: [0.6, -0.05, 0.01, 0.99]
-        }}
-        className="absolute top-8 left-8 z-20"
-      >
-        <Logo 
-          size="md" 
-          withBackground
-          className="hover:scale-105 transition-transform duration-300"
-        />
-      </motion.div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          custom={0.2}
-          initial="hidden"
-          animate="visible"
-          variants={textAnimation}
-          className="mb-8"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold font-serif text-accent mb-4">
-            The Living Bridge
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 font-sans">
-            Built to carry others. Formed in fire. Led by faith.
-          </p>
-        </motion.div>
-
-        {/* Bridge Animation */}
-        <motion.div
-          custom={0.4}
-          initial="hidden"
-          animate="visible"
-          variants={textAnimation}
-          className="mb-12"
-        >
-          <BridgeAnimation />
-        </motion.div>
-
-        {/* Portrait */}
-        <motion.div
-          custom={0.6}
-          initial="hidden"
-          animate="visible"
-          variants={textAnimation}
-          className="relative w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-accent/20"
-        >
-          <Image
-            src="/images/portrait.jpeg"
-            alt="Timeo Williams"
-            fill
-            className="object-cover"
-            priority
-          />
-        </motion.div>
-      </div>
-
-      {/* Animated Decorative Elements */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 pointer-events-none"
-      >
-        <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-      </motion.div>
     </div>
   );
-} 
+}

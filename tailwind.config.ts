@@ -13,9 +13,10 @@ const config: Config = {
     current: 'currentColor',
     extend: {
       colors: {
-        primary: '#556B2F',
-        secondary: '#2F2F2F',
-        accent: '#D4AF37',
+        gunmetal: '#1A1A1A',
+        khaki: '#C2B280', 
+        cream: '#F5F5F3',
+        steel: '#3A3A3A',
         background: {
           light: colors.gray[50],
           dark: colors.gray[900],
@@ -112,8 +113,8 @@ const config: Config = {
           'slideFromDownAndFade 0.6s ease-in-out 0.6s both',
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        serif: ['Lora', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
     },
   },

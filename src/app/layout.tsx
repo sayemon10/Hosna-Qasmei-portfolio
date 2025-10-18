@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
-import { Montserrat, Lora } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const montserrat = Montserrat({ 
+const inter = Inter({ 
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-inter',
   display: 'swap',
 });
 
-const lora = Lora({ 
+const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
-  variable: '--font-lora',
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Timeo Williams | The Living Bridge',
-  description: 'Built to carry others. Formed in fire. Led by faith.',
+  title: 'Timeo Williams | The Bridge Builder',
+  description: 'Connecting Technology to Humanity',
   icons: {
     icon: [
       { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   manifest: '/favicon/site.webmanifest',
   metadataBase: new URL('https://timeowilliams.com'),
   openGraph: {
-    title: 'Timeo Williams | The Living Bridge',
-    description: 'Built to carry others. Formed in fire. Led by faith.',
+    title: 'Timeo Williams | The Bridge Builder',
+    description: 'Connecting Technology to Humanity',
     images: [{ url: '/favicon/android-chrome-512x512.png' }],
   },
   twitter: {
     card: 'summary',
-    title: 'Timeo Williams | The Living Bridge',
-    description: 'Built to carry others. Formed in fire. Led by faith.',
+    title: 'Timeo Williams | The Bridge Builder',
+    description: 'Connecting Technology to Humanity',
     images: ['/favicon/android-chrome-512x512.png'],
   },
 };
@@ -48,15 +48,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${lora.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#556B2F" />
-        <meta name="theme-color" content="#556B2F" />
+        <meta name="msapplication-TileColor" content="#1A1A1A" />
+        <meta name="theme-color" content="#1A1A1A" />
       </head>
       <body className="font-sans antialiased">
         {children}

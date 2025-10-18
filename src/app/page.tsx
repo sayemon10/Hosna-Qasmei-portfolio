@@ -1,17 +1,17 @@
 import { Hero } from '@/components/Hero';
-import { Origin } from '@/components/Origin';
-import { Bridges } from '@/components/Bridges';
-import { Frameworks } from '@/components/Frameworks';
-import { Philosophy } from '@/components/Philosophy';
+import { About } from '@/components/About';
+import { Work } from '@/components/Work';
+import { Writing } from '@/components/Writing';
+import { Contact } from '@/components/Contact';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Origin />
-      <Bridges />
-      {/* <Frameworks /> */}
-      <Philosophy />
+      <About />
+      <Work />
+      <Writing />
+      <Contact />
     </>
   );
 }
