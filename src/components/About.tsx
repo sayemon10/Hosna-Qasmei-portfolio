@@ -17,91 +17,51 @@ export function About() {
         <motion.div {...fadeInUp} className="mb-20">
           <div className="flex items-center space-x-4 mb-8">
             <div className="h-px bg-steel flex-1" />
-            <h2 className="font-display text-gunmetal text-sm tracking-widest">PHILOSOPHY</h2>
+            <h2 className="font-display text-gunmetal text-sm tracking-widest">PRINCIPLES</h2>
             <div className="h-px bg-steel flex-1" />
           </div>
         </motion.div>
 
-        {/* Three Act Structure */}
-        <div className="space-y-24">
+        {/* Core Values - Minimal */}
+        <div className="space-y-16">
           
-          {/* Act I: Formation */}
           <motion.div 
             {...fadeInUp}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="grid grid-cols-12 gap-8"
+            className="text-center"
           >
-            <div className="col-span-3">
-              <h3 className="font-display text-khaki text-lg tracking-wider">01</h3>
-              <h4 className="font-display text-gunmetal text-xl mt-2">FORMATION</h4>
-              <div className="h-px bg-steel/30 w-16 mt-4" />
-            </div>
-            <div className="col-span-9">
-              <p className="font-sans text-gunmetal/80 text-lg leading-relaxed">
-                From USPS routes to Army discipline—every foundation was deliberate. 
-                The uniform taught precision. The mission taught service. 
-                The oath taught commitment beyond self.
-              </p>
+            <div className="grid grid-cols-3 gap-12 max-w-2xl mx-auto">
+              <div>
+                <div className="h-px bg-khaki w-8 mx-auto mb-4" />
+                <h3 className="font-display text-gunmetal text-sm tracking-widest">MASTERY</h3>
+              </div>
+              <div>
+                <div className="h-px bg-khaki w-8 mx-auto mb-4" />
+                <h3 className="font-display text-gunmetal text-sm tracking-widest">PRESENCE</h3>
+              </div>
+              <div>
+                <div className="h-px bg-khaki w-8 mx-auto mb-4" />
+                <h3 className="font-display text-gunmetal text-sm tracking-widest">CONNECTION</h3>
+              </div>
             </div>
           </motion.div>
 
-          {/* Act II: Discipline */}
+          {/* Minimal Statement */}
           <motion.div 
             {...fadeInUp}
             transition={{ delay: 0.4, duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="grid grid-cols-12 gap-8"
+            className="text-center"
           >
-            <div className="col-span-3">
-              <h3 className="font-display text-khaki text-lg tracking-wider">02</h3>
-              <h4 className="font-display text-gunmetal text-xl mt-2">DISCIPLINE</h4>
-              <div className="h-px bg-steel/30 w-16 mt-4" />
-            </div>
-            <div className="col-span-9">
-              <p className="font-sans text-gunmetal/80 text-lg leading-relaxed">
-                Systems thinking meets human purpose. Every line of code serves a mission. 
-                Every decision carries weight. Technology amplifies character—
-                it never replaces it.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Act III: Integration */}
-          <motion.div 
-            {...fadeInUp}
-            transition={{ delay: 0.6, duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="grid grid-cols-12 gap-8"
-          >
-            <div className="col-span-3">
-              <h3 className="font-display text-khaki text-lg tracking-wider">03</h3>
-              <h4 className="font-display text-gunmetal text-xl mt-2">INTEGRATION</h4>
-              <div className="h-px bg-steel/30 w-16 mt-4" />
-            </div>
-            <div className="col-span-9">
-              <p className="font-sans text-gunmetal/80 text-lg leading-relaxed">
-                Faith guides. Logic executes. Service sustains. 
-                The bridge connects what is to what should be—
-                carrying others toward their highest potential.
-              </p>
-            </div>
+            <div className="h-px bg-steel/30 w-24 mx-auto mb-8" />
+            <p className="font-sans text-gunmetal/60 text-lg leading-relaxed max-w-md mx-auto">
+              Excellence through discipline.<br />
+              Impact through systems.<br />
+              Growth through service.
+            </p>
+            <div className="h-px bg-steel/30 w-24 mx-auto mt-8" />
           </motion.div>
         </div>
 
-        {/* Core Principle */}
-        <motion.div 
-          {...fadeInUp}
-          transition={{ delay: 0.8, duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mt-32 text-center"
-        >
-          <div className="max-w-2xl mx-auto">
-            <div className="h-px bg-steel/30 w-32 mx-auto mb-8" />
-            <blockquote className="font-sans text-gunmetal/60 text-xl leading-relaxed italic">
-              &ldquo;I&rsquo;m building for the family I don&rsquo;t yet have, 
-              the mission that hasn&rsquo;t been given, 
-              the world that could be.&rdquo;
-            </blockquote>
-            <div className="h-px bg-steel/30 w-32 mx-auto mt-8" />
-          </div>
-        </motion.div>
       </div>
     </div>
   );

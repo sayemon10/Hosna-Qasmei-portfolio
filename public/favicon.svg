@@ -1,0 +1,24 @@
+<!-- Timeo Williams - Favicon -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .monogram { font-family: 'Helvetica Neue', 'Akkurat', system-ui, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Clean TW Monogram for favicon -->
+  <g fill="#F5F5F3" stroke-linecap="square">
+    <!-- T -->
+    <rect x="6" y="8" width="2" height="12" />
+    <rect x="4" y="8" width="8" height="2" />
+    
+    <!-- W -->
+    <g>
+      <rect x="14" y="10" width="2" height="10" />
+      <polygon points="17,10 18,10 20,18 19,18" />
+      <rect x="20" y="16" width="2" height="4" />
+      <polygon points="22,10 23,10 20,18 19,18" />
+      <rect x="25" y="10" width="2" height="10" />
+    </g>
+  </g>
+</svg>

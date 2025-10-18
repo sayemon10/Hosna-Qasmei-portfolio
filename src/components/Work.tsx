@@ -23,10 +23,10 @@ const projects = [
   {
     id: '03',
     name: 'TRINITY NS',
-    description: 'Military-grade network security framework for critical infrastructure.',
+    description: 'AI-powered decision support system using neurosymbolic VQA models for military commanders via ATAK integration.',
     type: 'DEFENSE PROJECT',
     url: '#',
-    status: 'CLASSIFIED'
+    status: 'PUBLISHED'
   },
   {
     id: '04',

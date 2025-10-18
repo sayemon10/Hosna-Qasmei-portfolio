@@ -10,20 +10,6 @@ const essays = [
     date: 'COMING SOON',
     readTime: '8 MIN',
     url: '#'
-  },
-  {
-    title: 'How the Army Taught Me to Hear God',
-    excerpt: 'Faith in formation: finding the sacred in service and structure.',
-    date: 'COMING SOON', 
-    readTime: '12 MIN',
-    url: '#'
-  },
-  {
-    title: 'Building for a Wife I Haven&rsquo;t Met Yet',
-    excerpt: 'Legacy, intention, and creating systems for the family to come.',
-    date: 'COMING SOON',
-    readTime: '10 MIN', 
-    url: '#'
   }
 ];
 
@@ -129,12 +115,17 @@ export function Writing() {
             <p className="font-sans text-gunmetal/60 text-lg leading-relaxed mb-6">
               Essays on technology, leadership, and faith.
             </p>
-            <button className="group">
+            <a 
+              href="https://substack.com/@timeow?utm_campaign=profile&utm_medium=profile-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-block"
+            >
               <div className="h-px bg-steel w-20 group-hover:w-28 transition-all duration-300 mx-auto" />
               <span className="font-display text-gunmetal/60 text-sm tracking-widest mt-2 block group-hover:text-khaki transition-colors duration-300">
                 SUBSCRIBE
               </span>
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

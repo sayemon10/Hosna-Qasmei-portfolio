@@ -2,9 +2,8 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
-const roles = ['ENGINEER', 'SOLDIER', 'BUILDER'];
+const roles = ['CITIZEN-WARRIOR', 'TECHNOLOGIST'];
 
 export function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -22,21 +21,28 @@ export function Hero() {
         {/* Grid System */}
         <div className="grid grid-cols-12 gap-8 items-center">
           
-          {/* Left Column - Portrait */}
+          {/* Left Column - Logo */}
           <div className="col-span-5">
             <div className="relative">
-              <div className="w-80 h-80 relative overflow-hidden">
-                <Image
-                  src="/images/portrait.jpeg"
-                  alt="Timeo Williams"
-                  fill
-                  className="object-cover grayscale"
-                  priority
-                />
+              {/* Federer-Inspired Monogram */}
+              <div className="w-80 h-80 flex items-center justify-center">
+                <div className="text-center relative">
+                  {/* Background Vertical Line */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="h-32 w-px bg-khaki/10" />
+                  </div>
+                  
+                  {/* Military-Refined TW Monogram */}
+                  <div className="relative">
+                    <img
+                      src="/tw-monogram.svg"
+                      alt="Timeo Williams TW Monogram"
+                      className="w-32 h-16 text-cream"
+                      style={{ filter: 'brightness(0) saturate(100%) invert(96%) sepia(4%) saturate(1000%) hue-rotate(45deg) brightness(98%) contrast(95%)' }}
+                    />
+                  </div>
+                </div>
               </div>
-              
-              {/* Subtle grid overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-gunmetal/20 to-transparent" />
             </div>
           </div>
 
@@ -77,34 +83,7 @@ export function Hero() {
                 </AnimatePresence>
               </motion.div>
 
-              {/* Tagline */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-              >
-                <p className="font-sans text-cream/80 text-lg font-light leading-relaxed max-w-md">
-                  THE BRIDGE BUILDER
-                </p>
-                <p className="font-sans text-cream/60 text-base font-light leading-relaxed max-w-md mt-2">
-                  Connecting Technology to Humanity
-                </p>
-              </motion.div>
 
-              {/* Minimalist CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className="pt-8"
-              >
-                <button className="group relative">
-                  <div className="h-px bg-steel w-16 group-hover:w-24 transition-all duration-300" />
-                  <span className="font-sans text-cream/60 text-sm tracking-wide mt-2 block group-hover:text-khaki transition-colors duration-300">
-                    EXPLORE
-                  </span>
-                </button>
-              </motion.div>
             </div>
           </div>
         </div>
@@ -117,7 +96,7 @@ export function Hero() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <div className="flex space-x-2">
-            {[0, 1, 2].map((i) => (
+            {[0, 1].map((i) => (
               <div
                 key={i}
                 className={`w-2 h-2 border border-steel/50 transition-all duration-300 ${

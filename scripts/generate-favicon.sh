@@ -3,16 +3,21 @@
 # Create favicon directory if it doesn't exist
 mkdir -p public/favicon
 
-# Generate different sizes of ICO and PNG files
-convert public/images/TW-logo.png -background none -resize 16x16 public/favicon/favicon-16x16.png
-convert public/images/TW-logo.png -background none -resize 32x32 public/favicon/favicon-32x32.png
-convert public/images/TW-logo.png -background none -resize 48x48 public/favicon/favicon-48x48.png
-convert public/images/TW-logo.png -background none -resize 180x180 public/favicon/apple-touch-icon.png
-convert public/images/TW-logo.png -background none -resize 192x192 public/favicon/android-chrome-192x192.png
-convert public/images/TW-logo.png -background none -resize 512x512 public/favicon/android-chrome-512x512.png
+# Generate different sizes of ICO and PNG files from new TW monogram
+convert public/tw-monogram.svg -background none -resize 16x16 public/favicon/favicon-16x16.png
+convert public/tw-monogram.svg -background none -resize 32x32 public/favicon/favicon-32x32.png
+convert public/tw-monogram.svg -background none -resize 48x48 public/favicon/favicon-48x48.png
+convert public/tw-monogram.svg -background none -resize 180x180 public/favicon/apple-touch-icon.png
+convert public/tw-monogram.svg -background none -resize 192x192 public/favicon/android-chrome-192x192.png
+convert public/tw-monogram.svg -background none -resize 512x512 public/favicon/android-chrome-512x512.png
 
 # Create ICO file with multiple sizes
 convert public/favicon/favicon-16x16.png public/favicon/favicon-32x32.png public/favicon/favicon-48x48.png public/favicon/favicon.ico
+
+# Copy favicon files to root public directory for direct access
+cp public/favicon/favicon-16x16.png public/favicon-16x16.png
+cp public/favicon/favicon-32x32.png public/favicon-32x32.png
+cp public/favicon/favicon.ico public/favicon.ico
 
 # Create manifest.json
 cat > public/favicon/site.webmanifest << EOL

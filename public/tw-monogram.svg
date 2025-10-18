@@ -1,0 +1,29 @@
+<svg width="140" height="70" viewBox="0 0 140 70" xmlns="http://www.w3.org/2000/svg">
+  <!-- Federer-Style TW Ligature -->
+  <g fill="#F5F5F3" stroke-linecap="square">
+    <!-- T vertical stem -->
+    <rect x="20" y="15" width="3" height="45" />
+    
+    <!-- T crossbar that flows into W -->
+    <rect x="5" y="15" width="70" height="3" />
+    
+    <!-- W - connected to T crossbar (rotated 180 degrees) -->
+    <!-- Left stroke of W -->
+    <rect x="72" y="18" width="3" height="42" />
+    
+    <!-- Left diagonal (down and right) -->
+    <path d="M78 18 L88 55 L91 54 L80 18 Z" />
+    
+    <!-- Middle point -->
+    <rect x="88" y="48" width="3" height="12" />
+    
+    <!-- Right diagonal (down and left) -->
+    <path d="M94 18 L104 55 L101 54 L91 18 Z" />
+    
+    <!-- Right stroke of W -->
+    <rect x="104" y="18" width="3" height="42" />
+  </g>
+  
+  <!-- Optional background vertical line -->
+  <line x1="70" y1="10" x2="70" y2="65" stroke="#C2B280" stroke-width="1" opacity="0.1"/>
+</svg>
