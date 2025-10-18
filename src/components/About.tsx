@@ -30,7 +30,7 @@ export function About() {
             transition={{ delay: 0.2, duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="text-center"
           >
-            <div className="grid grid-cols-3 gap-12 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 max-w-2xl mx-auto">
               <div>
                 <div className="h-px bg-khaki w-8 mx-auto mb-4" />
                 <h3 className="font-display text-gunmetal text-sm tracking-widest">MASTERY</h3>
@@ -39,7 +39,7 @@ export function About() {
                 <div className="h-px bg-khaki w-8 mx-auto mb-4" />
                 <h3 className="font-display text-gunmetal text-sm tracking-widest">PRESENCE</h3>
               </div>
-              <div>
+              <div className="pr-4 sm:pr-0">
                 <div className="h-px bg-khaki w-8 mx-auto mb-4" />
                 <h3 className="font-display text-gunmetal text-sm tracking-widest">CONNECTION</h3>
               </div>
